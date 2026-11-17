@@ -4,7 +4,7 @@
   Viene caricato come script normale (non Babel) prima dei file .jsx e si legge da window.CONTENT.
 
   ⚠ Dati ancora finti da sostituire prima della pubblicazione:
-     - config.rsvpEndpoint (URL della Web App di Google Apps Script, vedi docs/RSVP-GOOGLE-SHEET.md)
+     - config.rsvpEndpoint (URL "…/exec" della Web App di Google Apps Script)
 */
 window.CONTENT = {
   config: {
@@ -18,7 +18,7 @@ window.CONTENT = {
     // Se vuoto, il modulo mostra comunque il "Grazie!" ma non invia nulla (utile in sviluppo).
     rsvpEndpoint: '',
     hero: {
-      // Foto della home. Mettere il file originale in assets/ (vedi assets/LEGGIMI.md).
+      // Foto della home. File in assets/ (webp + jpg di riserva).
       src: 'assets/hero-alghero.webp',
       fallback: 'assets/hero-alghero.jpg',
       // Posizione del sole nella foto, come frazione di larghezza e altezza dell'IMMAGINE (non dello schermo).

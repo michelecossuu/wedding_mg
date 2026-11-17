@@ -1,7 +1,7 @@
 /* site.css — reset, token, base tipografica, header, menu lingua, layout, blocco titolo */
 
 :root {
-  /* Colori (SPEC §1) */
+  /* Colori */
   --c-bg: #FBF9F6;
   --c-text: #3D3542;
   --c-text-soft: #6A6070;

@@ -1,4 +1,4 @@
-/* page-rsvp.jsx — RSVP: modulo con invio al Foglio Google (SPEC §5) e schermata "Grazie!" */
+/* page-rsvp.jsx — RSVP: modulo con invio al Foglio Google e schermata "Grazie!" */
 (() => {
   const { useState } = React;
   const C = window.CONTENT;

@@ -1,5 +1,5 @@
 /*
-  sun.jsx — SunGlow: bagliore che pulsa sul sole della foto della home (SPEC §4).
+  sun.jsx — SunGlow: bagliore che pulsa sul sole della foto della home.
   Algoritmo portato dal sorgente del design: findSun (trova il sole), makeMask (maschera del cielo
   chiaro e caldo, così le teste e gli scogli coprono il bagliore), placeSun (posizione con object-fit:cover).
 */
