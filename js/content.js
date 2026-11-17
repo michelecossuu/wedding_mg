@@ -4,7 +4,7 @@
   Viene caricato come script normale (non Babel) prima dei file .jsx e si legge da window.CONTENT.
 
   ⚠ Dati ancora finti da sostituire prima della pubblicazione:
-     - config.rsvpEndpoint (URL "…/exec" della Web App di Google Apps Script)
+     - config.rsvpEndpoint (URL "…/exec" della Web App di Google Apps Script, vedi _apps-script/Code.gs, fuori dal repo)
 */
 window.CONTENT = {
   config: {
