@@ -1,0 +1,122 @@
+/* components.css — schede, pillole "Indicazioni", bottoni, chip, campi, interruttore Sì/No */
+
+/* Scheda bianca */
+.card {
+  background: var(--c-white);
+  box-shadow: var(--shadow-card);
+}
+
+/* Pillola lilla "Indicazioni ↗" */
+.pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: var(--c-lilac);
+  color: var(--c-plum);
+  font-family: var(--f-caps);
+  font-size: 12px;
+  letter-spacing: .2em;
+}
+.pill-link:hover { background: var(--c-lilac-hover); color: var(--c-plum-dark); }
+.pill-link--sm { padding: 10px 18px; font-size: 11px; }
+
+/* Bottone pieno prugna (Invia) */
+.btn-primary {
+  border: 0;
+  border-radius: 999px;
+  background: var(--c-plum);
+  color: var(--c-white);
+  padding: 18px;
+  font-family: var(--f-caps);
+  font-size: 13px;
+  letter-spacing: .24em;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--c-plum-dark); }
+.btn-primary:disabled { cursor: progress; background: var(--c-plum-dark); }
+
+/* Bottone lilla morbido (Invia un'altra risposta) */
+.btn-soft {
+  border: 0;
+  border-radius: 999px;
+  background: var(--c-lilac);
+  color: var(--c-plum);
+  cursor: pointer;
+  padding: 12px 22px;
+  font-size: 19px;
+}
+.btn-soft:hover { background: var(--c-lilac-hover); color: var(--c-plum-dark); }
+
+/* Bottone tondo con icona (copia IBAN) */
+.icon-btn {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--c-plum);
+  color: var(--c-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-btn:hover { background: var(--c-plum-dark); }
+
+/* Campi del modulo */
+.field {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: var(--c-field);
+  border-radius: 12px;
+  padding: 15px 18px;
+  font-size: 21px;
+  color: var(--c-text);
+}
+.field:focus { outline: 2px solid var(--c-nav-line); outline-offset: 2px; }
+.field--detail { padding: 13px 18px; font-size: 19px; }
+.field--song { padding: 14px 18px; font-size: 19px; }
+
+/* Chip (note alimentari) */
+.chip {
+  border: 1px solid var(--c-chip-border);
+  border-radius: 999px;
+  background: var(--c-white);
+  color: var(--c-text);
+  padding: 9px 18px;
+  font-size: 19px;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] {
+  background: var(--c-plum);
+  border-color: var(--c-plum);
+  color: var(--c-white);
+}
+
+/* Interruttore Sì / No */
+.toggle {
+  display: flex;
+  background: var(--c-lilac);
+  border-radius: 999px;
+  padding: 5px;
+}
+.toggle-seg {
+  flex: 1;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 13px 10px;
+  font-size: 21px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--c-label);
+}
+.toggle-seg[aria-pressed="true"] {
+  background: var(--c-white);
+  box-shadow: var(--shadow-seg);
+  color: var(--c-text);
+}

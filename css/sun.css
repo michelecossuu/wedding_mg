@@ -1,0 +1,53 @@
+/* sun.css — bagliore del sole sulla foto della home (SPEC §4) */
+
+.sun-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: 50% 70%;
+  mask-position: 50% 70%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* La posizione del gradiente è calcolata in sun.jsx e passata inline */
+.sun-wash {
+  position: absolute;
+  inset: 0;
+  animation: washIn .9s ease-out both, washPulse 6s ease-in-out .9s infinite;
+}
+
+.sun-core {
+  position: absolute;
+  width: clamp(280px, 40vw, 680px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 247, 224, .9) 0%, rgba(255, 224, 166, .55) 20%, rgba(255, 199, 130, .18) 45%, rgba(255, 199, 130, 0) 70%);
+  transform: translate(-50%, -50%);
+  animation: sunIn .9s ease-out both, sunPulse 6s ease-in-out .9s infinite;
+}
+
+@keyframes sunIn {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(.85); }
+  to { opacity: .6; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes sunPulse {
+  0%, 100% { opacity: .6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+@keyframes washIn {
+  from { opacity: 0; }
+  to { opacity: .5; }
+}
+@keyframes washPulse {
+  0%, 100% { opacity: .5; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sun-core { animation: none; opacity: .8; }
+  .sun-wash { animation: none; opacity: .7; }
+}

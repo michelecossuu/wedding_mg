@@ -1,0 +1,219 @@
+/* pages.css — Info (luoghi, regalo), RSVP (modulo, grazie), Cosa fare (griglia, schede) */
+
+/* ---------- Info matrimonio ---------- */
+
+.places {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 26px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--c-divider);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  gap: 1px;
+}
+
+.place {
+  background: var(--c-white);
+  padding: clamp(36px, 5vw, 52px) clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.place-time {
+  font-size: clamp(48px, 5vw, 56px);
+  font-weight: 300;
+  line-height: 1;
+  margin: 12px 0 18px;
+  font-variant-numeric: lining-nums;
+}
+.place-name {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(27px, 2.8vw, 30px);
+  line-height: 1.15;
+}
+.place-address { font-size: 19px; font-style: italic; color: var(--c-text-soft); }
+.place .pill-link { margin-top: 24px; }
+
+/* Pannello Regalo */
+.gift {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 28px;
+  background: var(--c-lilac);
+  border-radius: 24px;
+  padding: clamp(32px, 5vw, 40px) clamp(22px, 5vw, 48px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  text-align: left;
+}
+.gift-intro { display: flex; flex-direction: column; gap: 12px; }
+.gift-text { margin: 0; font-size: 21px; line-height: 1.5; text-wrap: pretty; }
+.gift-details { min-width: 0; display: flex; flex-direction: column; gap: 14px; font-size: 18px; }
+
+.iban-box {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--c-white);
+  border-radius: 12px;
+  padding: 10px 10px 10px 18px;
+}
+.iban-value {
+  flex: 1 1 auto;
+  min-width: 0;
+  letter-spacing: .04em;
+  font-variant-numeric: lining-nums tabular-nums;
+  overflow-wrap: anywhere;
+}
+.iban-label {
+  font-family: var(--f-caps);
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--c-label);
+  margin-right: 10px;
+}
+.gift-key { color: var(--c-label); font-style: italic; }
+
+/* ---------- RSVP ---------- */
+
+.rsvp-form,
+.rsvp-thanks {
+  width: 100%;
+  max-width: 760px;
+  margin-top: 26px;
+  border-radius: 24px;
+}
+
+.rsvp-form {
+  padding: clamp(32px, 5vw, 52px) clamp(20px, 5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  text-align: left;
+}
+
+.rsvp-thanks {
+  padding: clamp(40px, 5vw, 60px) clamp(22px, 5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.thanks-title {
+  font-family: var(--f-script);
+  font-size: clamp(52px, 6vw, 68px);
+  color: var(--c-plum);
+  line-height: 1.1;
+}
+.thanks-text { margin: 0; font-size: 22px; line-height: 1.5; }
+.rsvp-thanks .btn-soft { margin-top: 14px; }
+
+.form-row { display: flex; flex-direction: column; gap: 10px; }
+.form-row--diet { gap: 12px; }
+.form-extra { display: flex; flex-direction: column; gap: 34px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.form-help { font-size: 18px; font-style: italic; color: var(--c-text-soft); }
+.songs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+}
+.rsvp-form .btn-primary { margin-top: 6px; }
+
+.form-error {
+  margin: 0;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--c-plum-dark);
+  text-align: center;
+}
+
+/* Campo trappola anti-spam: fuori schermo */
+.hp {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ---------- Cosa fare ---------- */
+
+.todo-grid {
+  width: 100%;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 24px;
+  margin-top: 26px;
+  text-align: left;
+}
+
+.todo-card {
+  border-radius: 20px;
+  padding: 12px 12px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--c-lilac);
+}
+.todo-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+.todo-photo img.is-loaded { opacity: 1; }
+
+.todo-dist {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  pointer-events: none;
+  background: var(--c-white);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-family: var(--f-caps);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--c-teal);
+  box-shadow: var(--shadow-badge);
+}
+
+.todo-body {
+  padding: 18px 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.todo-title { margin: 0; font-weight: 400; font-size: 26px; line-height: 1.15; }
+.todo-text {
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--c-text-body);
+  text-wrap: pretty;
+}
+.todo-body .pill-link { margin-top: auto; align-self: flex-start; }
