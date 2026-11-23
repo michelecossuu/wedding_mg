@@ -215,3 +215,53 @@ input::placeholder { color: var(--c-placeholder); }
   letter-spacing: .28em;
   color: var(--c-teal);
 }
+
+/* Pulsante menu: nascosto su PC, compare solo su telefono */
+.nav-toggle { display: none; }
+
+/* Telefono e tablet verticale: logo + lingua + menu a tendina. Sopra i 900px non cambia nulla. */
+@media (max-width: 900px) {
+  .site-header {
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 12px 20px 0;
+  }
+
+  .logo { font-size: 27px; }
+
+  .header-right { flex-wrap: nowrap; gap: 0; }
+
+  .nav-toggle {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-right: -10px;
+    color: var(--c-text);
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 8px 20px 24px;
+    background: var(--c-bg);
+    box-shadow: 0 14px 24px rgba(61, 53, 66, .08);
+  }
+  .nav--open { display: flex; }
+
+  .nav-link {
+    padding: 14px 0 8px;
+    font-size: 15px;
+  }
+}

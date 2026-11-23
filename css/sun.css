@@ -51,3 +51,8 @@
   .sun-core { animation: none; opacity: .8; }
   .sun-wash { animation: none; opacity: .7; }
 }
+
+/* Su telefono la foto è più bassa: bagliore in proporzione (come su PC, 40% della larghezza) */
+@media (max-width: 900px) {
+  .sun-core { width: 40vw; }
+}

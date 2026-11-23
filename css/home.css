@@ -87,3 +87,11 @@
   padding: 16px clamp(24px, 4vw, 43px);
 }
 .cta:hover { background: var(--c-plum); color: var(--c-white); }
+
+/* Telefono e tablet verticale: foto intera (stesse proporzioni del file, 1672×941) invece del ritaglio */
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    aspect-ratio: 1672 / 941;
+  }
+}

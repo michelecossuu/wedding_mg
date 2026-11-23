@@ -99,6 +99,7 @@ window.CONTENT = {
       metaDescription: 'Il matrimonio di Marta e Giuliano ad Alghero, domenica 3 ottobre 2027.',
       nav: { home: 'HOME', info: 'INFO MATRIMONIO', rsvp: 'RSVP', todo: 'COSA FARE' },
       langLabel: 'Cambia lingua',
+      menuLabel: 'Menu',
       languages: { it: 'Italiano', en: 'English' },
 
       heroAlt: 'Marta e Giuliano con il cane, al tramonto sul mare di Alghero',
@@ -149,6 +150,7 @@ window.CONTENT = {
       metaDescription: 'Marta and Giuliano’s wedding in Alghero, Sunday 3 October 2027.',
       nav: { home: 'HOME', info: 'WEDDING INFO', rsvp: 'RSVP', todo: 'THINGS TO DO' },
       langLabel: 'Change language',
+      menuLabel: 'Menu',
       languages: { it: 'Italiano', en: 'English' },
 
       heroAlt: 'Marta and Giuliano with their dog, at sunset by the sea in Alghero',

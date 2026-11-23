@@ -87,24 +87,57 @@
     );
   }
 
+  // Icona menu (tre linee) / chiudi (X). Il pulsante si vede solo su telefono, vedi site.css.
+  function MenuIcon({ open }) {
+    return (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" aria-hidden="true">
+        {open
+          ? <path d="M5 5l14 14M19 5L5 19"></path>
+          : <path d="M3 7h18M3 12h18M3 17h18"></path>}
+      </svg>
+    );
+  }
+
   function Header({ t, lang, page, onLang }) {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    // Chiude il menu quando si cambia pagina o si preme Esc
+    useEffect(() => { setMenuOpen(false); }, [page]);
+    useEffect(() => {
+      if (!menuOpen) return;
+      const onKey = e => { if (e.key === 'Escape') setMenuOpen(false); };
+      document.addEventListener('keydown', onKey);
+      return () => document.removeEventListener('keydown', onKey);
+    }, [menuOpen]);
+
     return (
       <header className="site-header">
         <a className="logo" href={pageHref('home')}>{C.config.coupleName}</a>
         <div className="header-right">
-          <nav className="nav">
+          <nav className={'nav' + (menuOpen ? ' nav--open' : '')} id="site-nav">
             {SITE_PAGES.map(p => (
               <a
                 key={p.id}
                 className="nav-link"
                 href={pageHref(p.id)}
                 aria-current={page === p.id ? 'page' : undefined}
+                onClick={() => setMenuOpen(false)}
               >
                 {t.nav[p.nav]}
               </a>
             ))}
           </nav>
           <LangSwitch t={t} lang={lang} onLang={onLang} />
+          <button
+            type="button"
+            className="nav-toggle"
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label={t.menuLabel}
+            aria-expanded={menuOpen}
+            aria-controls="site-nav"
+          >
+            <MenuIcon open={menuOpen} />
+          </button>
         </div>
       </header>
     );
