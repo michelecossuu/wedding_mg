@@ -16,7 +16,7 @@ window.CONTENT = {
     langStorageKey: 'gm-wedding-lang',
     // URL "…/exec" della Web App Apps Script che scrive le risposte RSVP nel Foglio Google.
     // Se vuoto, il modulo mostra comunque il "Grazie!" ma non invia nulla (utile in sviluppo).
-    rsvpEndpoint: '',
+    rsvpEndpoint: 'https://script.google.com/macros/s/AKfycbzzPkck1D4YN1s0YOZsRNKTEF3ZaY-pnKguwJ5SiOwQeLNM70y4xFW7pq1BgkGjcOBH/exec',
     hero: {
       // Foto della home. File in assets/ (webp + jpg di riserva).
       src: 'assets/hero-alghero.webp',
