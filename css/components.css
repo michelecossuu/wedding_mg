@@ -19,7 +19,7 @@
   font-size: 12px;
   letter-spacing: .2em;
 }
-.pill-link:hover { background: var(--c-lilac-hover); color: var(--c-plum-dark); }
+@media (hover: hover) { .pill-link:hover { background: var(--c-lilac-hover); color: var(--c-plum-dark); } }
 .pill-link--sm { padding: 10px 18px; font-size: 11px; }
 
 /* Bottone pieno prugna (Invia) */
@@ -34,7 +34,7 @@
   letter-spacing: .24em;
   cursor: pointer;
 }
-.btn-primary:hover { background: var(--c-plum-dark); }
+@media (hover: hover) { .btn-primary:hover { background: var(--c-plum-dark); } }
 .btn-primary:disabled { cursor: progress; background: var(--c-plum-dark); }
 
 /* Bottone lilla morbido (Invia un'altra risposta) */
@@ -47,7 +47,7 @@
   padding: 12px 22px;
   font-size: 19px;
 }
-.btn-soft:hover { background: var(--c-lilac-hover); color: var(--c-plum-dark); }
+@media (hover: hover) { .btn-soft:hover { background: var(--c-lilac-hover); color: var(--c-plum-dark); } }
 
 /* Bottone tondo con icona (copia IBAN) */
 .icon-btn {
@@ -64,7 +64,7 @@
   align-items: center;
   justify-content: center;
 }
-.icon-btn:hover { background: var(--c-plum-dark); }
+@media (hover: hover) { .icon-btn:hover { background: var(--c-plum-dark); } }
 
 /* Campi del modulo */
 .field {

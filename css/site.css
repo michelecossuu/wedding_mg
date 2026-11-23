@@ -50,7 +50,7 @@ html, body {
 }
 
 a { color: var(--c-plum); text-decoration: none; }
-a:hover { color: var(--c-hover-teal); }
+@media (hover: hover) { a:hover { color: var(--c-hover-teal); } }
 
 input, textarea, button { font-family: inherit; }
 input::placeholder { color: var(--c-placeholder); }
@@ -96,7 +96,7 @@ input::placeholder { color: var(--c-placeholder); }
   color: var(--c-plum);
   white-space: nowrap;
 }
-.logo:hover { color: var(--c-hover-teal); }
+@media (hover: hover) { .logo:hover { color: var(--c-hover-teal); } }
 
 .header-right,
 .nav {
@@ -115,7 +115,7 @@ input::placeholder { color: var(--c-placeholder); }
   white-space: nowrap;
   border-bottom: 1px solid transparent;
 }
-.nav-link:hover { color: var(--c-plum); }
+@media (hover: hover) { .nav-link:hover { color: var(--c-plum); } }
 .nav-link[aria-current="page"] { border-bottom-color: var(--c-nav-line); }
 
 /* Menu lingua */
@@ -134,7 +134,7 @@ input::placeholder { color: var(--c-placeholder); }
   color: var(--c-text);
   padding: 0;
 }
-.lang-toggle:hover { color: var(--c-hover-teal); }
+@media (hover: hover) { .lang-toggle:hover { color: var(--c-hover-teal); } }
 
 .lang-menu {
   position: absolute;
@@ -161,7 +161,7 @@ input::placeholder { color: var(--c-placeholder); }
   color: var(--c-text);
   text-align: left;
 }
-.lang-option:hover { background: var(--c-menu-active); }
+@media (hover: hover) { .lang-option:hover { background: var(--c-menu-active); } }
 .lang-option[aria-pressed="true"] { background: var(--c-menu-active); color: var(--c-hover-teal); }
 
 .lang-code { font-size: 12px; letter-spacing: .2em; color: var(--c-lang-code); }
