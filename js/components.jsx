@@ -103,11 +103,16 @@
 
     // Chiude il menu quando si cambia pagina o si preme Esc
     useEffect(() => { setMenuOpen(false); }, [page]);
+    // Menu aperto (solo telefono): Esc lo chiude e la pagina sotto non scorre
     useEffect(() => {
       if (!menuOpen) return;
       const onKey = e => { if (e.key === 'Escape') setMenuOpen(false); };
       document.addEventListener('keydown', onKey);
-      return () => document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.removeEventListener('keydown', onKey);
+        document.body.style.overflow = '';
+      };
     }, [menuOpen]);
 
     return (
