@@ -36,6 +36,7 @@
   --f-body: 'Cormorant Garamond', Georgia, serif;
   --f-caps: 'Cinzel', serif;
   --f-script: 'Pinyon Script', cursive;
+  --f-logo: 'Tangerine', cursive;
 }
 
 /* Reset e base */
@@ -90,9 +91,10 @@ input::placeholder { color: var(--c-placeholder); }
 
 .logo {
   padding: 0;
-  font-family: var(--f-script);
-  font-size: clamp(28px, 3vw, 34px);
-  line-height: 1.1;
+  font-family: var(--f-logo);
+  font-weight: 700;
+  font-size: clamp(40px, 4.4vw, 50px);
+  line-height: 1;
   color: var(--c-plum);
   white-space: nowrap;
 }
