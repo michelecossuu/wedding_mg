@@ -55,7 +55,6 @@
     return (
       <div className="gift">
         <div className="gift-intro">
-          <Eyebrow as="div">{t.giftTitle}</Eyebrow>
           <p className="gift-text">{t.giftText}</p>
         </div>
         <div className="gift-details">

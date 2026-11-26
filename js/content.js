@@ -53,30 +53,39 @@ window.CONTENT = {
     }
   ],
 
-  // Pagina Cosa fare. slug = nome del file foto in assets/cosa-fare/<slug>.webp (o .jpg)
+  // Pagina Cosa fare. slug = nome del file foto in assets/cosa-fare/<slug>.jpg
+  // photo = crediti della foto (Wikimedia Commons): le licenze CC BY-SA chiedono autore e licenza visibili
   todo: [
     { slug: 'centro-storico', q: 'Bastioni Alghero',
+      photo: { author: 'Basilicofresco', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Bastioni_di_Alghero_e_il_campanile_di_Santa_Maria.jpg' },
       it: { title: 'Centro storico e Bastioni', text: 'Una passeggiata sulle mura al tramonto, tra vicoli, botteghe di corallo e torri catalane.', dist: 'IN CITTÀ' },
       en: { title: 'Old town and ramparts', text: 'A sunset walk along the sea walls, through narrow lanes, coral shops and Catalan towers.', dist: 'IN TOWN' } },
     { slug: 'grotta-di-nettuno', q: 'Grotta di Nettuno',
+      photo: { author: 'Tobias Helfrich', license: 'CC BY-SA 2.5', url: 'https://commons.wikimedia.org/wiki/File:Grotta_di_nettuno_sardinien.jpg' },
       it: { title: 'Grotta di Nettuno', text: 'Si raggiunge in barca dal porto o a piedi con i 654 gradini dell’Escala del Cabirol.', dist: '25 KM' },
       en: { title: 'Neptune’s Grotto', text: 'Reach it by boat from the harbour or on foot down the 654 steps of the Escala del Cabirol.', dist: '25 KM' } },
     { slug: 'capo-caccia', q: 'Capo Caccia',
+      photo: { author: 'Gianni Careddu', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Alghero_-_Capo_Caccia_(07).JPG' },
       it: { title: 'Capo Caccia', text: 'Il promontorio a picco sul mare, con uno dei panorami più belli della costa.', dist: '24 KM' },
       en: { title: 'Capo Caccia', text: 'The cliff-top headland with one of the finest views on the coast.', dist: '24 KM' } },
     { slug: 'bombarde-lazzaretto', q: 'Spiaggia Le Bombarde',
+      photo: { author: 'Silvia Franceschetti', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Le_Bombarde_-_panoramio.jpg' },
       it: { title: 'Le Bombarde e Lazzaretto', text: 'Due spiagge vicine di sabbia chiara e acqua bassa, ideali per una giornata di mare.', dist: '10 KM' },
       en: { title: 'Le Bombarde and Lazzaretto', text: 'Two nearby beaches with pale sand and shallow water, ideal for a day by the sea.', dist: '10 KM' } },
     { slug: 'nuraghe-palmavera', q: 'Nuraghe di Palmavera',
+      photo: { author: 'Garassino', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Nuraghe_Palmavera_1.jpg' },
       it: { title: 'Nuraghe di Palmavera', text: 'Un villaggio nuragico dell’età del bronzo, visitabile con guida.', dist: '10 KM' },
       en: { title: 'Palmavera Nuraghe', text: 'A Bronze Age nuragic village, with guided visits.', dist: '10 KM' } },
     { slug: 'bosa', q: 'Bosa',
+      photo: { author: 'Zsuzsanna Tóth', license: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:Bosa-2298388_960_720.jpg' },
       it: { title: 'Bosa', text: 'Borgo colorato sul fiume Temo, raggiungibile con la strada panoramica lungo la costa.', dist: '45 KM' },
       en: { title: 'Bosa', text: 'A colourful village on the Temo river, reached via the scenic coastal road.', dist: '45 KM' } },
     { slug: 'la-pelosa', q: 'Spiaggia La Pelosa Stintino',
+      photo: { author: 'Gianni Careddu', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Stintino_-_La_Pelosa_(03).JPG' },
       it: { title: 'La Pelosa, Stintino', text: 'Una delle spiagge più famose della Sardegna. In alta stagione serve la prenotazione.', dist: '55 KM' },
       en: { title: 'La Pelosa, Stintino', text: 'One of Sardinia’s best-known beaches. Booking is required in high season.', dist: '55 KM' } },
     { slug: 'cantine', q: 'Cantine Alghero',
+      photo: { author: 'Preppo456', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Cantina_Sella_%26_Mosca_le_botti.jpg' },
       it: { title: 'Cantine del territorio', text: 'Degustazioni di Vermentino e Cannonau nelle cantine attorno alla città.', dist: '5–10 KM' },
       en: { title: 'Local wineries', text: 'Vermentino and Cannonau tastings at the wineries around town.', dist: '5–10 KM' } }
   ],
@@ -103,8 +112,7 @@ window.CONTENT = {
       languages: { it: 'Italiano', en: 'English' },
 
       heroAlt: 'Marta e Giuliano con il cane, al tramonto sul mare di Alghero',
-      homeIntro: 'Non vediamo l’ora di festeggiare con voi.',
-      saveLabel: 'Salva la data:',
+      homeIntro: 'Non vediamo l’ora di festeggiare con voi!',
       saveDate: 'DOMENICA 3 OTTOBRE 2027',
       countdown: ['giorni', 'ore', 'minuti', 'secondi'],
       cta: 'CONFERMA LA TUA PRESENZA',
@@ -112,7 +120,6 @@ window.CONTENT = {
       infoTitle: 'Info matrimonio',
       infoSub: 'Domenica 3 ottobre 2027 · Alghero',
       directions: 'INDICAZIONI',
-      giftTitle: 'IL REGALO',
       giftText: 'La vostra presenza è il regalo più bello. Se desiderate, potete contribuire al nostro viaggio di nozze.',
       holderLabel: 'Intestato a',
       bankLabel: 'Banca',
@@ -142,7 +149,8 @@ window.CONTENT = {
       another: 'Invia un’altra risposta',
 
       todoTitle: 'Cosa fare',
-      todoSub: 'Qualche idea per chi si ferma qualche giorno in più ad Alghero e dintorni.'
+      todoSub: 'Qualche idea per chi si ferma qualche giorno in più ad Alghero e dintorni.',
+      photoCredits: 'Foto da Wikimedia Commons:'
     },
     en: {
       htmlLang: 'en',
@@ -155,7 +163,6 @@ window.CONTENT = {
 
       heroAlt: 'Marta and Giuliano with their dog, at sunset by the sea in Alghero',
       homeIntro: 'We can’t wait to celebrate with you.',
-      saveLabel: 'Save the date:',
       saveDate: 'SUNDAY 3 OCTOBER 2027',
       countdown: ['days', 'hours', 'minutes', 'seconds'],
       cta: 'CONFIRM YOUR ATTENDANCE',
@@ -163,7 +170,6 @@ window.CONTENT = {
       infoTitle: 'Wedding info',
       infoSub: 'Sunday 3 October 2027 · Alghero',
       directions: 'GET DIRECTIONS',
-      giftTitle: 'GIFTS',
       giftText: 'Your presence is the best gift. If you wish, you can contribute to our honeymoon.',
       holderLabel: 'Account holder',
       bankLabel: 'Bank',
@@ -193,7 +199,8 @@ window.CONTENT = {
       another: 'Send another reply',
 
       todoTitle: 'Things to do',
-      todoSub: 'A few ideas for those staying a few extra days in and around Alghero.'
+      todoSub: 'A few ideas for those staying a few extra days in and around Alghero.',
+      photoCredits: 'Photos from Wikimedia Commons:'
     }
   }
 };

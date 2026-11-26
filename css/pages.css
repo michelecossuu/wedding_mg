@@ -46,7 +46,7 @@
   margin-top: 28px;
   background: var(--c-lilac);
   border-radius: 24px;
-  padding: clamp(32px, 5vw, 40px) clamp(22px, 5vw, 48px);
+  padding: clamp(20px, 3vw, 24px) clamp(22px, 5vw, 48px);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: clamp(24px, 4vw, 48px);
@@ -217,3 +217,13 @@
   text-wrap: pretty;
 }
 .todo-body .pill-link { margin-top: auto; align-self: flex-start; }
+
+.todo-credits {
+  max-width: 1080px;
+  margin: 32px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--c-text-soft);
+  text-wrap: pretty;
+}
+.todo-credits a { color: inherit; }

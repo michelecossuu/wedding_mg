@@ -44,6 +44,16 @@
             );
           })}
         </div>
+        <p className="todo-credits">
+          {t.photoCredits}{' '}
+          {C.todo.map((d, i) => (
+            <React.Fragment key={d.slug}>
+              {i > 0 && ' · '}
+              <a href={d.photo.url} target="_blank" rel="noopener">{d[lang].title}</a>
+              {' — ' + d.photo.author + ', ' + d.photo.license}
+            </React.Fragment>
+          ))}
+        </p>
       </section>
     );
   }

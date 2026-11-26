@@ -47,7 +47,6 @@
   margin-top: 14px;
   font-size: clamp(20px, 2.4vw, 24px);
 }
-.save-label { font-style: italic; font-weight: 300; color: var(--c-text-soft); }
 .save-date {
   font-family: var(--f-caps);
   font-size: clamp(15px, 1.7vw, 18px);
@@ -93,15 +92,5 @@
   .hero {
     height: auto;
     aspect-ratio: 1672 / 941;
-  }
-}
-
-/* Telefono: "Salva la data" e la data non stanno su una riga; impilati e distanziati invece di andare a capo stretti */
-@media (max-width: 560px) {
-  .save {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    margin-top: 22px;
   }
 }

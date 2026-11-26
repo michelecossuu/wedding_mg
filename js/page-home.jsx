@@ -71,7 +71,6 @@
       <section className="page">
         <p className="home-intro">{t.homeIntro}</p>
         <div className="save">
-          <span className="save-label">{t.saveLabel}</span>
           <span className="save-date">{t.saveDate}</span>
         </div>
         <Countdown t={t} />
